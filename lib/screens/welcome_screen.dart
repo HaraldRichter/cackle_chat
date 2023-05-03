@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 
+import '../widgets/widgets.dart';
+
 class WelcomeScreen extends StatefulWidget {
   @override
   _WelcomeScreenState createState() => _WelcomeScreenState();
@@ -34,9 +36,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
     controller.forward();
 
     setState(() {});
-    controller.addListener(() {
-      print('Controller value: ${animation.value}');
-    });
+    controller.addListener(() {});
   }
 
   @override
@@ -70,63 +70,40 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                     fontWeight: FontWeight.w900,
                     color: Colors.black,
                   ),
-                  child: AnimatedTextKit(animatedTexts: [
-                    TypewriterAnimatedText(
-                      'Cackle',
-                    ),
-                  ]),
-                )
-                // TypewriterAnimatedText(
-                //   text: ['Cackle'],
-                //   style: TextStyle(
-                //     fontSize: 45.0,
-                //     fontWeight: FontWeight.w900,
-                //     color: Colors.black,
-                //   ),
-                // ),
+                  child: AnimatedTextKit(
+                    animatedTexts: [
+                      TypewriterAnimatedText(
+                        'Cackle',
+                      ),
+                    ],
+                  ),
+                ),
               ],
             ),
             SizedBox(
               height: 48.0,
             ),
-            Padding(
-              padding: EdgeInsets.symmetric(vertical: 16.0),
-              child: Material(
-                elevation: 5.0,
-                color: Colors.lightBlueAccent,
-                borderRadius: BorderRadius.circular(30.0),
-                child: MaterialButton(
-                  onPressed: () {
-                    GoRouter.of(context).pushNamed('login');
-                    //Go to login screen.
-                  },
-                  minWidth: 200.0,
-                  height: 42.0,
-                  child: Text(
-                    'Log In',
-                  ),
-                ),
-              ),
+            LongButton(
+              buttonColor: Colors.lightBlueAccent,
+              buttonLabel: 'Log in',
+              onPressed: () {
+                // GoRouter.of(context).pushNamed('login');
+                print('Login clicked');
+              },
             ),
-            Padding(
-              padding: EdgeInsets.symmetric(vertical: 16.0),
-              child: Material(
-                color: Colors.blueAccent,
-                borderRadius: BorderRadius.circular(30.0),
-                elevation: 5.0,
-                child: MaterialButton(
-                  onPressed: () {
-                    GoRouter.of(context).pushNamed('registration');
-                    //Go to registration screen.
-                  },
-                  minWidth: 200.0,
-                  height: 42.0,
-                  child: Text(
-                    'Register',
-                  ),
-                ),
-              ),
+            LongButton(
+              buttonColor: Colors.blueAccent,
+              buttonLabel: 'Register',
+              onPressed: () {
+                // GoRouter.of(context).pushNamed('registration');
+                print('Registration clicked');
+              },
             ),
+            MaterialButton(
+                color: Colors.green,
+                onPressed: () {
+                  GoRouter.of(context).pushNamed('registration');
+                }),
           ],
         ),
       ),

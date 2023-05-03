@@ -11,11 +11,11 @@ void main() {
     routeInformationParser: AppRouter().router.routeInformationParser,
     routerDelegate: AppRouter().router.routerDelegate,
     title: 'Cackle!',
-    theme: ThemeData.dark().copyWith(
-      textTheme: TextTheme(
-        bodyLarge: TextStyle(color: Colors.black54),
-      ),
-    ),
+    // theme: ThemeData.dark().copyWith(
+    //   textTheme: const TextTheme(
+    //     bodyLarge: TextStyle(color: Colors.black54),
+    //   ),
+    // ),
   ));
 }
 
