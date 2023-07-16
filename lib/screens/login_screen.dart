@@ -49,7 +49,7 @@ class _LoginScreenState extends State<LoginScreen> {
             SizedBox(
               height: 24.0,
             ),
-            LongButton(
+            LongButtonAlternative(
               buttonColor: Colors.lightBlueAccent,
               buttonLabel: 'Log in',
               onPressed: () {},

@@ -71,6 +71,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                     color: Colors.black,
                   ),
                   child: AnimatedTextKit(
+                    totalRepeatCount: 1,
                     animatedTexts: [
                       TypewriterAnimatedText(
                         'Cackle',
@@ -87,23 +88,16 @@ class _WelcomeScreenState extends State<WelcomeScreen>
               buttonColor: Colors.lightBlueAccent,
               buttonLabel: 'Log in',
               onPressed: () {
-                // GoRouter.of(context).pushNamed('login');
-                print('Login clicked');
+                GoRouter.of(context).pushNamed('login');
               },
             ),
             LongButton(
               buttonColor: Colors.blueAccent,
               buttonLabel: 'Register',
               onPressed: () {
-                // GoRouter.of(context).pushNamed('registration');
-                print('Registration clicked');
+                GoRouter.of(context).pushNamed('registration');
               },
             ),
-            MaterialButton(
-                color: Colors.green,
-                onPressed: () {
-                  GoRouter.of(context).pushNamed('registration');
-                }),
           ],
         ),
       ),

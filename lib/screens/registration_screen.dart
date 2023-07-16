@@ -48,7 +48,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
             SizedBox(
               height: 24.0,
             ),
-            LongButton(
+            LongButtonAlternative(
               buttonColor: Colors.blueAccent,
               buttonLabel: 'Register',
               onPressed: () {

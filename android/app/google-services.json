@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "164395452886",
+    "project_id": "cackle-chat-app",
+    "storage_bucket": "cackle-chat-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:164395452886:android:4a58ae3ad7c74c3cbd7c77",
+        "android_client_info": {
+          "package_name": "hyenabyte.de.cackle_chat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "164395452886-n4h61nqsm2kvj5k77j971odj47lsv8o2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1nrbtea3lMYDMcmOJioyfAvNzBLYFF1o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "164395452886-n4h61nqsm2kvj5k77j971odj47lsv8o2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
